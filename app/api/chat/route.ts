@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   const { messages, system, tools } = await req.json();
 
   const result = streamText({
-    model: openrouter("deepseek/deepseek-r1-0528-qwen3-8b:free"),
+   model: openrouter("deepseek/deepseek-chat"),
     messages,
     // forward system prompt and tools from the frontend
     toolCallStreaming: true,
