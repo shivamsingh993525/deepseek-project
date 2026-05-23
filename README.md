@@ -1,0 +1,2 @@
+# deepseek-project
+Chatgpt pro
