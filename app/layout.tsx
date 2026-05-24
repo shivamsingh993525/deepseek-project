@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
 import { Geist, Geist_Mono } from "next/font/google";
-import { ClerkProvider } from '@clerk/nextjs';
+import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
+
 import "./globals-new.css";
 
 const geistSans = Geist({
@@ -21,9 +24,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: ReactNode;
+}) {
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
